@@ -74,7 +74,7 @@ function validatingInput(inputType, value) {
             }
             break;
         case 'email':
-            var isValidEmail = new RegExp('^[_a-z0-9]+(.[_a-z0-9]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,4})$');
+            var isValidEmail = new RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
             // Force email input to be valid
             if (!value || value.length <= 0 || !isValidEmail.test(value)) {
                 validField.isValid = false;
