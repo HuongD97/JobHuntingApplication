@@ -28,26 +28,31 @@
         }
     </style>
     </head>
-    <body class="vertical-center">
+    <body class="vertical-center bg-dark">
     <div class="container">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <form action="login.php" method="post">
-                    <div class="form-group">
-                        <label for="emailInput"><b>Email</b></label>
-                        <input type="email" class="form-control" id="emailInput" name="email"
-                        placeholder="Enter your email" onkeyup="validate(this)">
-                        <small id="emailError" class="text-danger"></small>
+                <div class="card">
+                    <h5 class="card-header">Login</h5>    
+                    <div class="card-body">
+                        <form action="login.php" method="post">
+                            <div class="form-group">
+                                <label for="emailInput"><b>Email</b></label>
+                                <input type="email" class="form-control" id="emailInput" name="email"
+                                placeholder="Enter your email" onkeyup="validate(this)">
+                                <small id="emailError" class="text-danger"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordInput"><b>Password</b></label>
+                                <input type="password" class="form-control" id="passwordInput" name="password"
+                                placeholder="Enter your password" onkeyup="validate(this)">
+                                <small id="passwordError" class="text-danger"></small>
+                            </div>
+                            <button type="submit" id="login" class="btn btn-secondary btn-lg btn-block" disabled>Login</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="passwordInput"><b>Password</b></label>
-                        <input type="password" class="form-control" id="passwordInput" name="password"
-                        placeholder="Enter your password" onkeyup="validate(this)">
-                        <small id="passwordError" class="text-danger"></small>
-                    </div>
-                    <button type="submit" id="login" class="btn btn-secondary" disabled>Login</button>
-                </form>
+                </div>
             </div>
             <div class="col-md-3"></div>
         </div>
