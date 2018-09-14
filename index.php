@@ -49,6 +49,9 @@
                                 placeholder="Enter your password" onkeyup="validate(this)">
                                 <small id="passwordError" class="text-danger"></small>
                             </div>
+                            <div class="form-group">
+                                <a href="#">Forgot Password?</a>
+                            </div>
                             <button type="submit" id="login" class="btn btn-secondary btn-lg btn-block" disabled>Login</button>
                         </form>
                     </div>
