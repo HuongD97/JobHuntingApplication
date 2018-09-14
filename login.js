@@ -74,7 +74,8 @@ function validatingInput(inputType, value) {
             }
             break;
         case 'email':
-            var isValidEmail = new RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+            // Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email
+            var isValidEmail = new RegExp(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
             // Force email input to be valid
             if (!value || value.length <= 0 || !isValidEmail.test(value)) {
                 validField.isValid = false;
